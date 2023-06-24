@@ -1,0 +1,10 @@
+1 make abstract hasNuts() method in Cookie class
+2 add testHasNuts() method to CookieTest class
+3 add hasNuts() method to ChocChip class
+4 add hasNuts() method to GingerbreadCookie class
+5 add testHasNuts() method to GingerbreadCookieTest class
+6 add hasNuts() method to SugarCookie class
+7 add testHasNuts() method to SugarCookieTest class
+8 add hasNuts() method to Pecans class 
+9 add hasNuts() method to PowderedSugar class
+10 add hasNuts() mehtod to Sprinkles class
