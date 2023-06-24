@@ -1,0 +1,75 @@
+Countries Chosen:
+-
+-
+
+Patterns needed:
+- (Abstract?) Factory Method
+        Factories will have different ways to make the coins (manufacturing process)
+- Singleton - Concrete Mint factories will be singletons
+- NullObject might be used for when a coin fails a manufacturing step
+- Strategy can be used with the smelting process, since each coin has a different composition of metals
+
+Implementations:
+- Mint factory abstraction
+- 2 Country mint concrete factories
+- Coin abstraction
+- coin factory for each country's coins?
+- Singleton class/constructor for the concrete factories
+- Concrete coin that is a NullObject
+- Smelting strategy class, with different classes(/interfaces)? for the different metal compositions.
+    Smelting would connect to coin abstraction, which would require a SmeltingBehavior attribute and smelt()
+    method that would call the smelt method of the SmeltingBehavior 
+
+Feature 1:
+- Add factory method part of design, implement creator and product classes
+
+Feature 2:
+- Add singleton implementation to concrete factories
+
+Feature 3:
+- Add null object to coin implementation
+
+Featue 4:
+- Add strategy design to coin implementation
+
+Rule of Thumb for testing:
+    For every production class, there should be one testing class. For each production method, there
+    should be at least one test method.
+
+Classes:
+    - Mint Factory:
+      * Creator Classes:
+        + Mint factory abstraction
+            - abstract createCoin() method, which is the factory method
+            - 
+            -
+
+        + Country1 factory concrete
+            - implement factory methods
+        + Country2 factory concrete
+            - implement factory methods
+                (will eventually implement Singleton pattern for each factory)
+
+      * Product Classes:
+        + Coin abstraction
+            - value
+            - name
+        + Different kinds of Coins for each country
+                (will eventually implement strategy pattern for metal comp)
+            - TwoDollar
+            - Dollar
+            - HalfDollar
+            - Quarter
+            - CADQuarter
+            - Dime
+            - CADDime
+            - Nickle
+            - CADNickle
+            - Penny
+    
+    - NullCoin: (NullObj, f3)
+        - will extend the coin abstraction
+
+    - Smelt Composition: (Strategy, f4) interface?
+        -  Will need seperate classes for each smelt composition to be implemented,
+           all will implement the interface
